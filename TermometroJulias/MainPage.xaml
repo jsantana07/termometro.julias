@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermometroJulias.MainPage"
+             Shell.NavBarIsVisible="false">>
+        <Grid>
+    <Grid.Row.Definitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="80"/>
+        <RowDefinition Height="80"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="150"/>
+     </Grid.Row.Definitions>
+        <Grid.Column.Definitions>
+         <ColumnDefinition Width="*">
+         <ColumnDefinition Width="60">
+         <ColumnDefinition Width="60">
+      </Grid.Column.Definitions>
+
+        <Image x:Name="imagem"  
+                Aspect="AspectFill"/>
+    <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="1"
+         Grid.RowSpan="2"
+         Grid.Column="0"
+        Text="frame1">
+    </Frame>
+
+     <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="1"
+         Grid.Column="1"
+        Text="frame2">
+    </Frame>
+
+     <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="2"
+         Grid.Column="1"
+        Text="frame3">
+    </Frame>
+
+     <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="1"
+         Grid.Column="2"
+        Text="frame4">
+    </Frame>
+
+     <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="2"
+         Grid.Column="2"
+        Text="frame5">
+    </Frame>
+
+     <Frame
+        Padding="0"
+        CornerRadius="30"
+        BackgrondColor="Transparent"
+        Grid.Row="4"
+         Grid.Column="0"
+         Grid.ColumnSpan="2"
+        Text="frame6">
+    </Frame>
+
+      <Grid>
+</ContentPage>
