@@ -2,78 +2,85 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TermometroJulias.MainPage"
-             Shell.NavBarIsVisible="false">>
-        <Grid>
-    <Grid.Row.Definitions>
+             Shell.NavBarIsVisible="false">
+
+    <Grid RowSpacing="10"
+          ColumnSpacing="10">
+
+    <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
         <RowDefinition Height="80"/>
         <RowDefinition Height="80"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="150"/>
-     </Grid.Row.Definitions>
-        <Grid.Column.Definitions>
-         <ColumnDefinition Width="*">
-         <ColumnDefinition Width="60">
-         <ColumnDefinition Width="60">
-      </Grid.Column.Definitions>
+     </Grid.RowDefinitions>
 
-        <Image x:Name="imagem"  
-                Aspect="AspectFill"/>
+    <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*"/>
+         <ColumnDefinition Width="*"/>
+         <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+    <Image  x:Name="imagem"
+            Source="dianublado.jpg"  
+            Aspect="AspectFill"
+            Grid.RowSpan="5"
+            Grid.ColumnSpan="3"/>
+
+           
     <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="1"
-         Grid.RowSpan="2"
-         Grid.Column="0"
-        Text="frame1">
-    </Frame>
+            Margin="10,0,0,0"
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="0"/>
+    
 
      <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="1"
-         Grid.Column="1"
-        Text="frame2">
-    </Frame>
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="1"
+            Grid.Column="1"/>
+            
+    
+     <Frame
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="2"
+            Grid.Column="1"/>
+    
 
      <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="2"
-         Grid.Column="1"
-        Text="frame3">
-    </Frame>
+            Margin="0,0,10,0"
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="1"
+            Grid.Column="2"/>
+   
 
      <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="1"
-         Grid.Column="2"
-        Text="frame4">
-    </Frame>
+            Margin="0,0,10,0"
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="2"
+            Grid.Column="2"/>
+    
 
      <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="2"
-         Grid.Column="2"
-        Text="frame5">
-    </Frame>
-
-     <Frame
-        Padding="0"
-        CornerRadius="30"
-        BackgrondColor="Transparent"
-        Grid.Row="4"
-         Grid.Column="0"
-         Grid.ColumnSpan="2"
-        Text="frame6">
-    </Frame>
-
-      <Grid>
+            Margin="10,0,10,10"
+            Padding="0"
+            CornerRadius="30"
+            BackgroundColor="#88ffffff"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"/>
+   
+      
+      </Grid>
 </ContentPage>
