@@ -20,7 +20,9 @@
          <ColumnDefinition Width="*"/>
          <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
+       
 
+       
     <Image  x:Name="imagem"
             Source="dianublado.jpg"  
             Aspect="AspectFill"
@@ -35,8 +37,31 @@
             BackgroundColor="#88ffffff"
             Grid.Row="1"
             Grid.RowSpan="2"
-            Grid.Column="0"/>
-    
+            Grid.Column="0">
+        <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="60"/>
+               <RowDefinition Height="60"/>
+       </Grid.RowDefinitions>
+
+         <Label x:Name="Temp"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="60"
+           Grid.Row="0">
+
+           <Label x:Name="description"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="60"
+           Grid.Row="1">
+
+           <Label  x:Name="city"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="60"
+           Grid.Row="2">
+  </Frame>
 
      <Frame
             Padding="0"
