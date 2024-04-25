@@ -16,10 +16,10 @@
      </Grid.RowDefinitions>
 
     <Grid.ColumnDefinitions>
-         <ColumnDefinition Width="*"/>
-         <ColumnDefinition Width="*"/>
-         <ColumnDefinition Width="*"/>
-      </Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
        
 
        
@@ -38,31 +38,32 @@
             Grid.Row="1"
             Grid.RowSpan="2"
             Grid.Column="0">
-       <Grid>
-        <Grid.RowDefinitions>
-              <RowDefinition Height="*"/>
-              <RowDefinition Height="60"/>
-               <RowDefinition Height="60"/>
+    <Grid>
+       <Grid.RowDefinitions>
+           <RowDefinition Height="*"/>
+           <RowDefinition Height="*"/>
+           <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
 
-         <Label x:Name="Temp"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="60"
-           Grid.Row="0"/>
+       <Label x:Name="labelTemp"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="0"
+              HorizontalOptions="Center"/>
 
-           <Label x:Name="description"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="60"
-           Grid.Row="1"/>
+       <Label x:Name="labelSky"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="1"/>
 
-           <Label  x:Name="city"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="60"
-           Grid.Row="2"/>
-           </Grid>
+       <Label  x:Name="labelCidade"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="2"/>
+     </Grid>
   </Frame>
 
      <Frame
@@ -72,7 +73,41 @@
             Grid.Row="1"
             Grid.Column="1">
 
-        </Frame>
+     <Grid>
+        <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>   
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+       <Label Text="Chuva"
+             Grid.Row="0"
+             Grid.Column="0"/>
+
+             <Label Text="Humidade"
+             Grid.Row="1"
+             Grid.Column="0"/>
+        
+
+       <Label x:Name="labelChuva"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="12"
+              Grid.Row="0"
+              Grid.Column="1"/>
+
+       <Label x:Name="labelHumidade"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="12"
+              Grid.Row="1"
+              Grid.Column="1"/>
+   </Grid>
+       </Frame>
 
             
     
@@ -82,6 +117,40 @@
             BackgroundColor="#88ffffff"
             Grid.Row="2"
             Grid.Column="1">
+
+            <Grid>
+        <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>   
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Label Text="Amanhecer"
+             Grid.Row="0"
+             Grid.Column="0"/>
+
+              <Label Text="Anoitecer"
+             Grid.Row="1"
+             Grid.Column="0"/>
+
+       <Label x:Name="labelAmanhecer"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="0"
+              Grid.Column="1"/>
+
+       <Label x:Name="labelAnoitecer"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="1"
+              Grid.Column="1"/>
+            </Grid>
      </Frame>
 
      <Frame
@@ -91,6 +160,40 @@
             BackgroundColor="#88ffffff"
             Grid.Row="1"
             Grid.Column="2">
+
+             <Grid>
+        <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>   
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+     <Label Text="Força do Vento"
+             Grid.Row="0"
+             Grid.Column="0"/>
+
+<Label Text="Direção do Vento"
+             Grid.Row="1"
+             Grid.Column="0"/>
+           
+            <Label x:Name="labelForcaVento"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="20"
+           Grid.Row="0"
+            Grid.Column="1"/>
+
+            <Label x:Name="labelDirecaoVento"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="20"
+           Grid.Row="1"
+            Grid.Column="1"/>
+        </Grid>
     </Frame>
 
      <Frame
@@ -100,6 +203,18 @@
             BackgroundColor="#88ffffff"
             Grid.Row="2"
             Grid.Column="2">
+            <Grid>
+        <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>   
+       </Grid.RowDefinitions>
+               <Label x:Name="labelMoonFase"
+          TextColor="#2f2f36"
+          FontFamily="OpenSans-Regular.ttf"
+          FontSize="20"
+           Grid.Row="0"/>
+           </Grid>
+
      </Frame>
 
      <Frame

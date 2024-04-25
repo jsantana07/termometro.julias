@@ -1,4 +1,5 @@
-﻿using Termometrojulias;
+﻿using System.Text.Json;
+using Termometrojulias;
 
 namespace TermometroJulias;
 
@@ -12,24 +13,23 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 
-		PreencherTela();
+		
 		AtualizaTempo();
 
 	}
 		void PreencherTela()
 		
 		{
-			labelTemp.Text= resposta.results.temp.ToString();
+			labelTemp.Text= resposta.results.Temp.ToString();
 			labelSky.Text= resposta.results.description;
 			labelCidade.Text= resposta.results.city;
 			labelChuva.Text= resposta.results.rain.ToString();
 			labelHumidade.Text= resposta.results.humidity.ToString();
 			labelAmanhecer.Text= resposta.results.sunrise;
 			labelAnoitecer.Text= resposta.results.sunset;
-			labelForcawind.Text= resposta.results.wind_speedy.ToString();
-			labelDirecaoWind.Text= resposta.results.wind_direction;
+			labelForcaVento.Text= resposta.results.wind_speedy.ToString();
+			labelDirecaoVento.Text= resposta.results.wind_direction.ToString();
 			labelMoonFase.Text= resposta.results.moon_phase;
-			labelTemp.Text=resposta.results.temp.ToString();
 			
 		}
 	async void AtualizaTempo()
@@ -38,15 +38,16 @@ public partial class MainPage : ContentPage
 		{
 			var  httpClient= new HttpClient();
 			var response= await httpClient.GetAsync(Url);
-			if (response.IsSucessStatusCode)
+			if (response.IsSuccessStatusCode)
 			{
-				var content= await httpClient.GetAsync(url);	
-				Resposta= JsonSerializer.Deserialize<Results>(content);		
+				var content= await response.Content.ReadAsStringAsync();
+				resposta= JsonSerializer.Deserialize<Resposta>(content);		
 			}
+			PreencherTela();
 		}
 	   catch (Exception e)
 	   {
-			
+			System.Diagnostics.Debug.WriteLine(e);
 	   }
 	}
 }
