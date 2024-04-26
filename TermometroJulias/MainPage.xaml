@@ -23,8 +23,7 @@
        
 
        
-    <Image  x:Name="imagem"
-            Source="dianublado.jpg"  
+    <Image  x:Name="imagemdefundo"
             Aspect="AspectFill"
             Grid.RowSpan="5"
             Grid.ColumnSpan="3"/>
@@ -130,12 +129,12 @@
        </Grid.ColumnDefinitions>
 
         <Label Text="Amanhecer"
-             Grid.Row="0"
-             Grid.Column="0"/>
+               Grid.Row="0"
+               Grid.Column="0"/>
 
               <Label Text="Anoitecer"
-             Grid.Row="1"
-             Grid.Column="0"/>
+                     Grid.Row="1"
+                     Grid.Column="0"/>
 
        <Label x:Name="labelAmanhecer"
               TextColor="#2f2f36"
@@ -181,18 +180,18 @@
              Grid.Column="0"/>
            
             <Label x:Name="labelForcaVento"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="20"
-           Grid.Row="0"
-            Grid.Column="1"/>
+                     TextColor="#2f2f36"
+                     FontFamily="OpenSans-Regular.ttf"
+                     FontSize="20"
+                     Grid.Row="0"
+                     Grid.Column="1"/>
 
             <Label x:Name="labelDirecaoVento"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="20"
-           Grid.Row="1"
-            Grid.Column="1"/>
+                     TextColor="#2f2f36"
+                     FontFamily="OpenSans-Regular.ttf"
+                     FontSize="20"
+                     Grid.Row="1"
+                     Grid.Column="1"/>
         </Grid>
     </Frame>
 
@@ -203,16 +202,23 @@
             BackgroundColor="#88ffffff"
             Grid.Row="2"
             Grid.Column="2">
+
             <Grid>
         <Grid.RowDefinitions>
               <RowDefinition Height="*"/>
               <RowDefinition Height="*"/>   
        </Grid.RowDefinitions>
-               <Label x:Name="labelMoonFase"
-          TextColor="#2f2f36"
-          FontFamily="OpenSans-Regular.ttf"
-          FontSize="20"
-           Grid.Row="0"/>
+
+       <Label Text="Fase da Lua"
+             Grid.Row="0"
+             Grid.Column="0"/>
+
+       <Label x:Name="labelMoonFase"
+              TextColor="#2f2f36"
+              FontFamily="OpenSans-Regular.ttf"
+              FontSize="20"
+              Grid.Row="0"
+              Grid.Column="1"/>
            </Grid>
 
      </Frame>

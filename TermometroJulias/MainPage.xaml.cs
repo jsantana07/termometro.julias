@@ -12,8 +12,6 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-
-		
 		AtualizaTempo();
 
 	}
@@ -31,6 +29,26 @@ public partial class MainPage : ContentPage
 			labelDirecaoVento.Text= resposta.results.wind_direction.ToString();
 			labelMoonFase.Text= resposta.results.moon_phase;
 			
+			if (resposta.results.currently =="dia")
+			{
+				if (resposta.results.rain >=10)
+				imagemdefundo.Source="diachuvoso.jpg";
+				else if (resposta.results.cloudiness >=10)
+				imagemdefundo.Source="dianublado.jpg";
+				else
+				imagemdefundo.Source="diaensolarado.jpg";
+			}
+			else
+			   
+			{
+				if (resposta.results.rain >=10)
+				imagemdefundo.Source="noitechuvosa.jpg";
+				else if (resposta.results.cloudiness >=10)
+				imagemdefundo.Source="noitenublada.jpg";
+				else
+				imagemdefundo.Source="noiteestrelada.jpg";
+			}
+
 		}
 	async void AtualizaTempo()
 	{

@@ -17,6 +17,6 @@ public class results
     public string wind_cardinal {get;set;}
     public string moon_phase {get;set;}
     public string currently {get;set;}
-    public double claudiness {get;set;}
+    public double cloudiness {get;set;}
 
 }
