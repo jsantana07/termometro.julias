@@ -18,7 +18,7 @@ public partial class MainPage : ContentPage
 		void PreencherTela()
 		
 		{
-			labelTemp.Text= resposta.results.Temp.ToString();
+			labelTemp.Text= resposta.results.temp.ToString();
 			labelSky.Text= resposta.results.description;
 			labelCidade.Text= resposta.results.city;
 			labelChuva.Text= resposta.results.rain.ToString();
@@ -27,7 +27,24 @@ public partial class MainPage : ContentPage
 			labelAnoitecer.Text= resposta.results.sunset;
 			labelForcaVento.Text= resposta.results.wind_speedy.ToString();
 			labelDirecaoVento.Text= resposta.results.wind_direction.ToString();
-			labelMoonFase.Text= resposta.results.moon_phase;
+
+			if(resposta.results.moon_phase=="new")
+				labelMoonFase.Text="Lua nova";
+			else if(resposta.results.moon_phase=="waxing_crescent")
+				labelMoonFase.Text="Lua crescente";
+				else if(resposta.results.moon_phase=="first_quarter")
+				labelMoonFase.Text="Quarto crescente";
+				else if(resposta.results.moon_phase=="waxing_gibbous")
+				labelMoonFase.Text="Gibosa crescente";
+				else if(resposta.results.moon_phase=="waning_gibbous")
+				labelMoonFase.Text="Gibosa minguante";
+					else if(resposta.results.moon_phase=="full")
+				labelMoonFase.Text="Lua cheia";
+					else if(resposta.results.moon_phase=="Last_quarter")
+				labelMoonFase.Text="Quarto minguante";
+					else if(resposta.results.moon_phase=="waning_crescent")
+				labelMoonFase.Text="Lua minguante";
+			
 			
 			if (resposta.results.currently =="dia")
 			{
